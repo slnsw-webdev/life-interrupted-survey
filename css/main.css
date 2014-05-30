@@ -28,8 +28,8 @@ html {
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background-color: #00cc99;
+    color: #ffffff;
 }
 
 /*
@@ -91,6 +91,391 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	background: url('img/gs.png');
+	/*background = gradient + image pattern combo*/
+	background: 
+		linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)), 
+		url('img/gs.png');
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+	height: 100%;
+	width: 100%;	
+}
+
+hr {
+	border-top: 1px solid #ddd;	
+}
+
+/*
+#container {
+	width: 768px;
+	height: 1024px;	
+}
+*/
+
+#main {
+  margin-top: 30px;
+  margin-left: auto; 
+  margin-right: auto;
+  position: relative;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  box-sizing: border-box;
+  width: 95%;
+}
+
+#header {
+	background-color: #000;
+	height: 75px;
+	margin: 0px;
+	padding: 0px;
+	display: table;	
+	width: 100%;
+}
+
+
+#logocontainer {
+	display: table-cell;	
+}
+
+#title {
+	color: #fff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 27px;
+	font-weight:400;
+	padding-left: 50px;	
+}
+
+#logo {
+	padding-left: 20px;
+	alignment-adjust: central;	
+}
+
+#searchform {
+	display: table-cell;	
+}
+
+#sllogocontainer {
+	display: table-cell;	
+	width: 121px;
+}
+
+#surveyheader {
+	margin-left: 30px; 
+	margin-right: 30px; 
+	min-width: 80%;	
+}
+
+#barcontainer {
+	margin-left: 30px; 
+	margin-right: 30px; 
+	min-width: 80%;	
+}
+
+.ui-widget-header {
+	border: 1px solid #e78f08;
+	background: #e50046 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
+	color: #fff;
+	font-weight: bold;	
+}
+
+/*form styles*/
+#msform {
+	min-width: 80%;
+	min-height: 600px;
+	margin-top: 20px;
+	margin-left: 30px; 
+	margin-right: 30px;
+	margin-bottom: 20px;
+	position: relative;
+}
+#msform fieldset {
+	width: 100%;
+	height: 100%;
+	/*stacking fieldsets above each other*/
+	position: absolute;
+	top: 20px;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 10px 5px 10px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: Arial;
+	color: #2C3E50;
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+#msform select {
+	outline:none;
+	background-color:transparent;
+    border: 0px solid;
+}
+
+#msform li {
+	
+}	
+
+/*form styles*/
+#confirmForm {
+	min-width: 80%;
+	min-height: 600px;
+	margin-top: 20px;
+	margin-left: 30px; 
+	margin-right: 30px;
+	margin-bottom: 20px;
+	position: relative;
+}
+#confirmForm fieldset {
+	width: 100%;
+	height: 100%;
+	/*stacking fieldsets above each other*/
+	position: absolute;
+	top: 20px;
+}
+/*Hide all except first fieldset*/
+#confirmForm fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#confirmForm input, #confirmForm textarea {
+	padding: 10px 5px 10px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	font-family: Arial;
+	color: #2C3E50;
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+#confirmForm select {
+	outline:none;
+	background-color:transparent;
+    border: 0px solid;
+}
+
+#confirmForm li {
+	
+}	
+
+/*headings*/
+.fs-title {
+	font-size: 20px;
+	font-style: italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:400;
+	color: #0059be;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 20px;
+	padding-top: 15px;
+}
+
+#confirmationPage {
+	display: none;	
+}
+
+#msform .single-button   {
+	background-color: #ededed;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color: #777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:57px;
+	width:200px;
+	text-decoration: none;
+	text-align: center;
+	margin-right: 8px;
+	vertical-align: top;
+}
+#msform .single-button:hover {
+	background-color:#00cc99;
+	color: #ffffff;
+}
+
+#msform .multiple-button   {
+	background-color: #ededed;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color: #777777;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:57px;
+	width:200px;
+	text-align: center;
+	text-wrap:normal;
+	margin-right: 8px;
+	white-space: normal;
+	vertical-align: top;
+}
+#msform .multiple-button:hover {
+	background-color:#00cc99;
+	color: #ffffff;
+}
+
+#msform .multiple-large-button   {
+	background-color: #ededed;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color: #777777;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:57px;
+	width:550px;
+	text-align: center;
+	text-wrap:normal;
+	margin-right: 8px;
+	white-space: normal;
+	vertical-align: top;
+}
+#msform .multiple-large-button:hover {
+	background-color:#00cc99;
+	color: #ffffff;
+}
+
+#q8detailscontainer {
+	display: '';
+}
+
+
+#msform input.next.action-button {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+}
+
+#msform input.previous.action-button {
+	position: absolute;
+	bottom: 40px;
+	right: 150px;
+}
+
+#msform .action-button  {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
+	background:-moz-linear-gradient( center top, #616161 5%, #616161 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');
+	background-color:#616161;
+	border:1px solid #616161;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #616161;
+	margin: 3px;
+}
+#msform .action-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
+	background:-moz-linear-gradient( center top, #616161 5%, #616161 5% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');
+	background-color:#e50046;
+}
+
+#msform input.submit.action-button {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	color: #fff;
+	background-color: #e50046;
+}
+
+#confirmationPage {
+	min-width: 80%;
+	min-height: 600px;
+	margin-top: 20px;
+	margin-left: 30px; 
+	margin-right: 30px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#confirmForm {
+	min-width: 80%;
+	min-height: 600px;
+	margin-left: 30px; 
+	margin-right: 30px;
+	margin-bottom: 20px;
+	position: relative;
+}
+#confirmForm fieldset {
+	width: 100%;
+	height: 100%;
+	/*stacking fieldsets above each other*/
+	position: absolute;
+	top: 20px;
+}
+
+#confirmForm .action-button  {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
+	background:-moz-linear-gradient( center top, #616161 5%, #616161 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');
+	background-color:#616161;
+	border:1px solid #616161;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #616161;
+	margin: 3px;
+}
+#confirmForm .action-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
+	background:-moz-linear-gradient( center top, #616161 5%, #616161 5% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');
+	background-color:#e50046;
+}
+
+#confirmForm input.submit.action-button {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	color: #fff;
+	background-color: #e50046;
+}
 
 
 

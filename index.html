@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Life Interrupted</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,18 +11,307 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.min.css">
         <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+		<script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-ui-1.10.4.min.js"></script>
+        
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        <!-- survey logo -->
+		<div id="container">
+        
+            <div id="header">
+                <div id="logocontainer">
+                    <div id="title">Survey Form</div>
+                </div>
+                <div id="searchform"></div>
+                <div id="sllogocontainer">
+                    <img src="img/sl_logo.png" id="sl_logo" name="sl_logo">
+                </div>
+            </div>
+            
+            <div id="main" role="main">
+            	
+                <div id="surveyheader">
+                	<img src="img/survey_logo.png" />
+                    <hr />
+                </div>
+    			
+                <div id="barcontainer">
+    				<!-- progressbar -->
+                	<div id="progressbar" style="height: 20px;"></div>
+    			</div>
+                
+                <!-- multistep form -->
+                <form id="msform">
+                    
+                    <!-- fieldsets -->
+                    <fieldset>
+                        <h2 class="fs-title">Have you visited Life Interrupted before?</h2>
+                        <input type="button" name="q1btn" class="single-button" value="Yes" />
+                        <input type="button" name="q1btn" class="single-button" value="No" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="fs-title">Is Life Interrupted the main reason you are visiting the State Library today?</h2>
+                        <input type="button" name="q2btn" class="single-button" value="Yes" />
+                        <input type="button" name="q2btn" class="single-button" value="No" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="fs-title">How did you hear about Life Interrupted?</h2>
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library app" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library banners" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library bookmarks" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library brochure / What’s On / SL magazine" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library enewsletter" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library internal signage" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library social media" />
+                        <input type="button" name="q3btn" class="multiple-button" value="State Library website" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Daily Telegraph print advertisement" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Newspaper article" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Inside History magazine" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Time Out Sydney" />
+                        <input type="button" name="q3btn" class="multiple-button" value="What’s On in Sydney" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Radio" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Word-of-mouth" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Don’t know" />
+                        <input type="button" name="q3btn" class="multiple-button" value="Other" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                     <fieldset>
+                        <h2 class="fs-title">How long did you spend at Life Interrupted?</h2>
+                        <input type="button" name="q4btn" class="multiple-button" value="Less than 15 minutes" />
+                        <input type="button" name="q4btn" class="multiple-button" value="15–30 minutes" />
+                        <input type="button" name="q4btn" class="multiple-button" value="30–60 minutes" />
+                        <input type="button" name="q4btn" class="multiple-button" value="More than an hour" />
+                        <input type="button" name="q4btn" class="multiple-button" value="Don’t know" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Did you visit Life Interrupted …</h2>
+                        <input type="button" name="q5btn" class="multiple-button" value="Alone" />
+                        <input type="button" name="q5btn" class="multiple-button" value="With children" />
+                        <input type="button" name="q5btn" class="multiple-button" value="With spouse / partner" />
+                        <input type="button" name="q5btn" class="multiple-button" value="With friends" />
+                        <input type="button" name="q5btn" class="multiple-button" value="With a group / tour" />
+                        <input type="button" name="q5btn" class="multiple-button" value="Other" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">What elements of Life Interrupted did you experience?</h2>
+                        <input type="button" name="q6btn" class="multiple-button" value="Collection items" />
+                        <input type="button" name="q6btn" class="multiple-button" value="Room guide" />
+                        <input type="button" name="q6btn" class="multiple-button" value="Film/projection" />
+                        <input type="button" name="q6btn" class="multiple-button" value="Timeline" />
+                        <input type="button" name="q6btn" class="multiple-button" value="iPads" />
+                        <input type="button" name="q6btn" class="multiple-button" value="WWI website" />
+                        <input type="button" name="q6btn" class="multiple-button" value="Curio app" />
+                        <input type="button" name="q6btn" class="multiple-button" value="Events and tours" />
+                        <input type="button" name="q6btn" class="multiple-button" value="Other" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Which of the following statements best describes your engagement with the exhibition today?</h2>
+                        <input type="button" name="q7btn" class="multiple-large-button" value="I glanced at collection items and moved on" />
+                        <input type="button" name="q7btn" class="multiple-large-button" value="I stopped for short periods to look at collection items" />
+                        <input type="button" name="q7btn" class="multiple-large-button" value="I stopped for long periods of time to look at collection items, sometimes reading related information" />
+                        <input type="button" name="q7btn" class="multiple-large-button" value="I stopped and stayed for significant periods of time to look at collection items, sometimes reading related information or discussing collection items with others" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Did Life Interrupted contain information or an experience that was unexpected or surprising?</h2>
+                        <input type="button" name="q8btn" class="single-button" value="Yes" />
+                        <input type="button" name="q8btn" class="single-button" value="No" />
+                        <div id="q8detailscontainer">
+                        	<!--- add in option for extra text field --->
+                        	<h3 class="fs-subtitle">As you answered yes, please describe what was unexpected or surprising in Life Interrupted.</h3>
+                        	<textarea name="q8details" placeholder="please describe ..." rows="6"></textarea>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Overall, how would you rate the quality of Life Interrupted exhibition?</h2>
+                        <input type="button" name="q9btn" class="multiple-button" value="Excellent" />
+                        <input type="button" name="q9btn" class="multiple-button" value="Very good" />
+                        <input type="button" name="q9btn" class="multiple-button" value="Good" />
+                        <input type="button" name="q9btn" class="multiple-button" value="Fair" />
+                        <input type="button" name="q9btn" class="multiple-button" value="Poor" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">How likely are you to recommend Life Interrupted to others?</h2>
+                       <input type="button" name="q10btn" class="multiple-button" value="Very likely" />
+                       <input type="button" name="q10btn" class="multiple-button" value="Likely" />
+                       <input type="button" name="q10btn" class="multiple-button" value="Neither likely nor unlikely" />
+                       <input type="button" name="q10btn" class="multiple-button" value="Unlikely" />
+                       <input type="button" name="q10btn" class="multiple-button" value="Very unlikely" />
+                       <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Which of the following statements best describes your attitude to arts and cultural activity?</h2>
+                        <input type="button" name="q11btn" class="multiple-button" value="I know what I like and seek wonder and nostalgia" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I like to see the thrilling and must-see events" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I like to be a part of something bigger" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I like to make my own discoveries" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I like to be the first to try something new" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I like to learn and spend time with others" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I like to relax and spend time with friends" />
+                        <input type="button" name="q11btn" class="multiple-button" value="I know what I like and avoid the mainstream" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Apart from today, have you visited the State Library in the last 12 months?</h2>
+                         <input type="button" name="q12btn" class="single-button" value="Yes" />
+                        <input type="button" name="q12btn" class="single-button" value="No" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">If you have visited the State Library in the last 12 months, how many times did you visit during that period?</h2>
+                        <input type="button" name="q13btn" class="multiple-button" value="Twice" />
+                        <input type="button" name="q13btn" class="multiple-button" value="Every couple of months" />
+                        <input type="button" name="q13btn" class="multiple-button" value="Every month" />
+                        <input type="button" name="q13btn" class="multiple-button" value="Don’t know" />
+                        <input type="button" name="q13btn" class="multiple-button" value="Other" />
+                        <div id="q13detailscontainer">
+                        	<!--- add in option for extra text field --->
+                        	<h3 class="fs-subtitle">As you selected other, please provide details below.</h3>
+                        	<textarea name="q13details" placeholder="please describe ..." rows="3"></textarea>
+                        </div>
+                        
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">If you have visited the State Library in the last 12 months, which of the following areas / services did you use during that period?</h2>
+                        <input type="button" name="q14btn" class="multiple-button" value="State Reference Library" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Mitchell Library" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Education / training programs" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Exhibitions" />
+                        <input type="button" name="q14btn" class="multiple-button" value="School holiday programs" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Public events" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Library Shop" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Cafe" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Website" />
+                        <input type="button" name="q14btn" class="multiple-button" value="Other" />
+                        <div id="q14detailscontainer">
+                        	<!--- add in option for extra text field --->
+                        	<h3 class="fs-subtitle">As you selected other, please provide details below.</h3>
+                        	<textarea name="q14details" placeholder="please describe ..." rows="3"></textarea>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Have you experienced physical accessibility issues when visiting the State Library, either in person or online?</h2>
+                        
+                        
+                        <!--- add in option if yes selected --->
+                        <h3 class="fs-subtitle">If changes could be made to improve physical accessibility and support services at the State Library, what would you suggest?</h3>
+                         <input type="button" name="q15btn" class="single-button" value="Yes" />
+                        <input type="button" name="q15btn" class="single-button" value="No" />
+                        
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">What is the main language spoken at your home?</h2>
+                        <input type="text" name="fname" placeholder="Main language" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Your age category?</h2>
+                        <input type="button" name="q17btn" class="single-button" value="Under 18 years" />
+                        <input type="button" name="q17btn" class="single-button" value="18–24 years" />
+                        <input type="button" name="q17btn" class="single-button" value="25–34 years" />
+                        <input type="button" name="q17btn" class="single-button" value="35–44 years" />
+                        <input type="button" name="q17btn" class="single-button" value="45–54 years" />
+                        <input type="button" name="q17btn" class="single-button" value="55–64 years" />
+                        <input type="button" name="q17btn" class="single-button" value="65–74 years" />
+                        <input type="button" name="q17btn" class="single-button" value="75 years and over" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Your gender?</h2>
+                        <input type="button" name="q18btn" class="single-button" value="Male" />
+                        <input type="button" name="q18btn" class="single-button" value="Female" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Your Australian postcode or country of origin?</h2>
+                        <input type="text" name="fname" placeholder="Post code" />
+                        <input type="text" name="fname" placeholder="Country of origin" />
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <h2 class="fs-title">Do you have any other comments?</h2>
+                        <textarea name="address" placeholder="Comments" rows="10"></textarea>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                    </fieldset>        
+                </form>
+                
+                <div id="confirmationPage">
+                    <h2 class="fs-title">Thank you for your feedback.</h2>
+                    <h3 class="fs-subtitle">If you have any queries about this survey please contact Research & Development, phone (02) 9273 1407 or email research@sl.nsw.gov.au</h3>
+                    <h3 class="fs-subtitle">
+                    <form id="confirmForm">
+                    	<fieldset>
+                          <strong>Enter the draw to win.</strong><br />
+                          <input type="text" name="confirm_name" placeholder="Name" /><br />
+                          <input type="text" name="confirm_phone" placeholder="Phone" /><br />
+                          <input type="text" name="confirm_email" placeholder="Email" /><br /><br />
+                          <strong>Stay in touch</strong><br />
+                          Please add my contact details to receive:<br />
+                          <input type="radio" name="confirm_events" value="1" />&nbsp;Events and exhibitions enewsletters<br />
+                          <input type="radio" name="confirm_friends" value="1" />&nbsp;Friends of the State Library membership information<br />
+                          <input type="radio" name="confirm_invites" value="1" />&nbsp;State Library user research invitations<br />
+                          Draw only open to Australian residents.<br />
+                          Your personal information collected on this form will be treated as confidential and managed in accordance with NSW privacy legislation. For further information please email privacy@sl.nsw.gov.au<br />
+                          <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                        </fieldset>
+                    </form>
+                    </h3>
+                </div>
+        	</div>
+        </div>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
