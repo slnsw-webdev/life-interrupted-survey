@@ -26,10 +26,17 @@
 <!--- write the LI survey form data --->
 <cfif isstruct(url) && not structisempty(url)>
 	<!---<cfoutput>#structToXml(form, "form", "field")#</cfoutput>--->
+	
     <cfsavecontent variable="surveydata">	    	   
     	<cfoutput>#SerializeJSON(url)#</cfoutput>    
     </cfsavecontent>
-    <cffile action="append" file="#getdirectoryfrompath(getBaseTemplatePath())#surveydata.txt" output="#chr(13)##chr(10)##chr(13)##chr(10)#">
-    <cffile action="append" file="#getdirectoryfrompath(getBaseTemplatePath())#surveydata.txt" output="#surveydata#">
-   
+
+    <cfif fileExists("#application["config"]["cacheDirectory"]#/life-interrupted-surveydata.txt")>
+	    <cffile action="append" file="#application["config"]["cacheDirectory"]#/life-interrupted-surveydata.txt" output="#chr(13)##chr(10)##chr(13)##chr(10)#">
+	    <cffile action="append" file="#application["config"]["cacheDirectory"]#/life-interrupted-surveydata.txt" output="#surveydata#">        	
+    <cfelse>
+    	<cffile action="write" file="#application["config"]["cacheDirectory"]#/life-interrupted-surveydata.txt" output="">
+    </cfif>
+
+
 </cfif>

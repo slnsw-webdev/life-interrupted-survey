@@ -30,6 +30,12 @@
     <cfsavecontent variable="emaildata">	    	   
     	<cfoutput>#SerializeJSON(url)#</cfoutput>    
     </cfsavecontent>
-    <cffile action="append" file="#getdirectoryfrompath(getBaseTemplatePath())#emaildata.txt" output="#chr(13)##chr(10)##chr(13)##chr(10)#">
-    <cffile action="append" file="#getdirectoryfrompath(getBaseTemplatePath())#emaildata.txt" output="#emaildata#">    
+
+    <cfif fileExists("#application["config"]["cacheDirectory"]#/life-interrupted-emaildata.txt")>
+	    <cffile action="append" file="#application["config"]["cacheDirectory"]#/life-interrupted-emaildata.txt" output="#chr(13)##chr(10)##chr(13)##chr(10)#">
+	    <cffile action="append" file="#application["config"]["cacheDirectory"]#/life-interrupted-emaildata.txt" output="#emaildata#">        	
+    <cfelse>
+    	<cffile action="write" file="#application["config"]["cacheDirectory"]#/life-interrupted-emaildata.txt" output="">
+    </cfif>
+
 </cfif>

@@ -189,6 +189,7 @@ $(document).ready(function () {
 		
 		// set posting url
 		var postUrl = "http://www2.sl.nsw.gov.au/apps/life-interrupted-survey/process.html";
+		// var postUrl = "process.html";
 		
 		// serialize form data
 		var formData = "?" + $( this ).serialize();
@@ -225,6 +226,8 @@ $(document).ready(function () {
 		event.preventDefault();
 		// set posting url
 		var emailUrl = "http://www2.sl.nsw.gov.au/apps/life-interrupted-survey/email.html";
+		//var emailUrl = "email.html";
+		
 		// serialize form data
 		var emailData = "?" + $( this ).serialize();
 		
