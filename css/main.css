@@ -378,6 +378,7 @@ hr {
 	color: #ffffff;
 }
 
+
 #q8detailscontainer {
 	display: '';
 }
@@ -387,6 +388,12 @@ hr {
 	position: absolute;
 	bottom: 40px;
 	right: 40px;
+}
+
+#msform input.reset.reset-button {
+	position: absolute;
+	bottom: 40px;
+	right: 260px;
 }
 
 #msform input.previous.action-button {
@@ -414,6 +421,31 @@ hr {
 	margin: 3px;
 }
 #msform .action-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
+	background:-moz-linear-gradient( center top, #616161 5%, #616161 5% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');
+	background-color:#e50046;
+}
+
+#msform .reset-button  {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
+	background:-moz-linear-gradient( center top, #616161 5%, #616161 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');
+	background-color:#616161;
+	border:1px solid #616161;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #616161;
+	margin: 3px;
+}
+#msform .reset-button:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #616161), color-stop(1, #616161) );
 	background:-moz-linear-gradient( center top, #616161 5%, #616161 5% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#616161', endColorstr='#616161');

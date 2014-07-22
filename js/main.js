@@ -3,12 +3,23 @@ var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
+
+// idle timer code
+$( document ).idleTimer( 15*60*1000 );
+$( document ).on( "idle.idleTimer", function(){
+	location.reload();
+});
+
 // hide other containers
 $("#q3detailscontainer").hide();
 $("#q5detailscontainer").hide();
 $("#q6detailscontainer").hide();
 $("#q8detailscontainer").hide();
 $("#q12adetailscontainer").hide();
+
+$(".reset-button").click(function(){
+	location.reload();
+});
 
 $(".next").click(function(){
 	if(animating) return false;
